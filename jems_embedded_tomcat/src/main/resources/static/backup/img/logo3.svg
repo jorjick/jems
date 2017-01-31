@@ -1,0 +1,27 @@
+<svg id="svg4225" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150" width="400" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 400 150">
+	<defs id="defs4227">
+		<filter id="filter5321" style="color-interpolation-filters:sRGB" height="1.5" width="1.5" y="-.25" x="-.25">
+			<feGaussianBlur id="feGaussianBlur5323" stdDeviation="1" result="result1"/>
+			<feComposite id="feComposite5325" operator="in" result="result4" in2="result1" in="result1"/>
+			<feGaussianBlur id="feGaussianBlur5327" stdDeviation="7" result="result6" in="result4"/>
+			<feComposite id="feComposite5329" operator="over" result="result8" in2="result4" in="result6"/>
+			<feComposite id="feComposite5331" operator="in" result="fbSourceGraphic" in2="result8" in="result6"/>
+			<feSpecularLighting id="feSpecularLighting5333" lighting-color="rgb(255,255,255)" specularConstant="2" result="result1" specularExponent="45" in="fbSourceGraphic" surfaceScale="2.5">
+				<fePointLight id="fePointLight5335" y="-10000" x="-5000" z="20000"/>
+			</feSpecularLighting>
+			<feComposite id="feComposite5337" operator="in" result="result2" in2="fbSourceGraphic" in="result1"/>
+			<feComposite id="feComposite5339" in2="result2" k3="1.5" k2="1.2" result="result4" in="fbSourceGraphic" operator="arithmetic"/>
+			<feComposite id="feComposite5341" operator="over" result="result9" in2="result4" in="result9"/>
+			<feBlend id="feBlend5343" mode="screen" in2="result9"/>
+		</filter>
+	</defs>
+	<g id="layer1" transform="translate(0 -902.36)">
+		<flowRoot id="flowRoot4801" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="90px" line-height="125%" font-family="&apos;Noto Sans Sinhala&apos;" fill="black"><flowRegion id="flowRegion4803"><rect id="rect4805" height="113.1" width="362.76" y="20.345" x="20"/></flowRegion><flowPara id="flowPara4807"/></flowRoot>
+		<g id="text4809" filter="url(#filter5321)">
+			<path id="path5473" fill="#0f8707" d="m76.861 934.16q0 2.9031-2.0453 4.8824-1.9794 1.9794-4.9484 1.9794-2.8371 0-4.8164-1.9794-1.9794-2.0453-1.9794-4.8824t1.9794-4.8824q2.0453-2.0453 4.8164-2.0453 2.9031 0 4.9484 2.0453 2.0453 1.9794 2.0453 4.8824zm-0.13196 85.376q0 29.426-22.829 29.426-5.4762 0-9.0391-2.1113-3.6288-2.0453-3.6288-5.2783 0-2.2432 1.5835-3.7607 1.5835-1.5176 3.9587-1.5176 3.035 0 6.4659 4.2887 3.035 3.8267 5.6742 3.8267 3.233 0 4.6185-2.4412 1.8474-3.3649 1.8474-16.363v-51.199q0-8.1154-4.2886-8.1154-3.4309 0-5.4102 0.39587l-0.65979 0.13196v-2.1113q10.82-3.3649 21.047-7.3236l0.65979 0.39587v61.756z"/>
+			<path id="path5475" d="m168.84 996.7-6.136 22.829h-72.906v-2.5732q7.3236-0.5278 9.5009-2.7711 2.2433-2.2432 2.2433-9.3689v-60.041q0-7.0597-2.1773-9.303-2.1113-2.2433-9.5669-2.8371v-2.5732h71.719l0.39587 19.332h-3.3649q-1.7154-9.105-5.4102-11.612-3.6948-2.5732-15.109-2.5732h-18.276q-2.969 0-3.6948 1.0557-0.72576 0.98967-0.72576 3.5628v29.954h20.783q9.303 0 11.876-3.3649 1.7814-2.2433 2.969-9.4349h3.101v31.34h-3.101q-1.3196-8.4452-3.9587-10.689-2.5732-2.3092-10.886-2.3092h-20.783v33.385q0 3.6288 0.9237 4.2226 1.6495 1.5835 13.262 1.5835h3.6288q14.515 0 20.651-3.4309 6.202-3.4308 11.216-14.383h3.8268z"/>
+			<path id="path5477" d="m287.33 1019.5h-37.806v-2.5732q7.9834-0.5278 10.095-2.837 2.1773-2.3753 2.1773-10.82v-61.228l-34.573 77.459h-1.9134l-33.913-74.292v54.432q0 10.227 2.4412 13.592 2.5072 3.299 10.293 3.6948v2.5732h-31.736v-2.5732q8.3793-0.5938 10.689-3.6948 2.3752-3.1669 2.3752-13.592v-54.894q0-7.3896-2.2433-9.5009t-10.557-2.6392v-2.5732h26.721l31.208 68.222 29.888-68.222h26.853v2.5732q-7.4556 0.59381-9.6329 2.8371-2.1113 2.1773-2.1113 9.303v60.041q0 7.1916 2.1773 9.4349 2.1773 2.1773 9.5669 2.7051v2.5732z"/>
+			<path id="path5479" d="m357.2 996.83q0 10.425-7.9834 17.55-7.9174 7.0597-19.596 7.0597-7.9174 0-15.967-3.101-3.8268-1.5175-6.334-1.5175-3.5628 0-3.7608 4.4865h-3.035l-4.0247-28.701h3.101q9.8308 23.95 27.315 23.95 7.3896 0 12.008-4.2227 4.6185-4.2886 4.6185-11.018 0-5.0144-1.9134-7.8514-5.3443-8.0494-20.123-15.835-11.348-5.9381-16.231-12.074-4.8824-6.136-4.8824-14.251 0-10.557 7.1257-16.825t16.297-6.268q6.9937 0 14.317 2.969 3.9587 1.5835 5.9381 1.5835 3.4969 0 4.2886-4.5525h2.8371l3.035 28.767h-3.4309q-2.7051-10.161-8.2473-15.835-7.1917-7.3896-16.429-7.3896-6.334 0-10.227 3.4969-3.8268 3.4309-3.8268 9.0391 0 10.293 19.86 21.047 13.328 7.3236 19.266 14.251 6.004 6.9278 6.004 15.241z"/>
+		</g>
+	</g>
+</svg>

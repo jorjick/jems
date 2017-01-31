@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:title="#{users}"></title>
+<th:block th:include="res_inc::head"></th:block>
+</head>
+<body>
+	<div th:replace="fragments/top_menu"></div>
+
+	<div id="app">
+		<div class="ui top attached segment">
+			<div class="header">
+				<h2 th:text="#{users}"></h2>
+			</div>
+			<div>
+				<table id="users_table" class="ui celled striped table">
+					<thead>
+						<tr>
+							<th th:text=#{user_name}></th>
+							<th th:text="#{email}"></th>
+							<th th:text="#{enabled}"></th>
+							<th th:text="#{roles}"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr v-if="dataReady" v-for="row in rows">
+							<td>{{row.username}}</td>
+							<td>{{row.email}}</td>
+							<td>{{row.enabled}}</td>
+							<td>
+								<ul v-for="role in row.roles">
+									<li>{{role.role}}</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th colspan="4">
+								<div class="column">
+									<button class="primary ui button" th:text=#{add_user}
+										v-on:click="show_add_user_modal"></button>
+								</div>
+							</th>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+		<div id="add_user_modal" class="ui modal">
+			<div class="header" th:text=#{add_user}></div>
+			<div class="content">
+				<form id=add_user_form class="ui form">
+					<div class="field">
+						<input type="text" name="username" th:placeholder="#{user_name}">
+					</div>
+					<div class="field">
+						<input type="email" name="email" th:placeholder="#{email}">
+					</div>
+					<div class="field">
+						<input type="password" name="password"
+							th:placeholder="#{password}">
+					</div>
+				</form>
+			</div>
+			<div class="actions">
+				<button class="ui left floated negative button" th:text="#{cancel}"></button>
+				<button class="ui right floated positive button" th:text="#{save}" 
+					v-on:click.prevent="save_user"></button>
+			</div>
+		</div>
+	</div>
+	<th:block th:include="res_inc::bottom-scripts" th:remove="tag"></th:block>
+	<script type="text/javascript" src="/jems/static/js/users.js"></script>
+</body>
+</html>

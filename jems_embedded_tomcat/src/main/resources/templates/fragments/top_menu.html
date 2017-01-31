@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<th:block th:include="res_inc::head"></th:block>
+</head>
+<body>
+	<div th:fragment="top_menu" class="ui borderless stackable menu">
+		<a class="item" th:href="@{~/jems/admin/users}"> <i class="user icon"></i> <span
+			th:text="#{users}">Users</span>
+		</a> <a class="item"> <i class="desktop icon"></i> <span
+			th:text="#{comps_etc}"></span>
+		</a> <a class="item"> <i class="print icon"></i> <span
+			th:text="#{printers}"></span>
+		</a>
+		<div class="ui pointing right dropdown item">
+			<span class="item"
+				th:text="${#authentication.getPrincipal().getUsername()}"></span> <i
+				class="dropdown icon"></i>
+			<div class="menu">
+				<div class="item" style="border: none">
+					<span th:switch="${#locale.language}"> <span th:case='en'>
+							<i class="us flag"></i> <span th:text="#{english}"></span>
+					</span> <span th:case='ru'> <i class="ru flag"></i> <span
+							th:text="#{russian}"></span>
+					</span>
+					</span>
+					<div class="left menu">
+						<a class="item" href="?lang=en"><i class="us flag"></i> <span
+							th:text="#{english}"></span> </a> <a class="item" href="?lang=ru"><i
+							class="ru flag"></i> <span th:text="#{russian}"></span></a>
+					</div>
+				</div>
+				<div class="item" id="logout">
+					<span th:text="#{logout}"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<th:block th:include="res_inc::bottom-scripts" th:remove="tag"></th:block>
+</body>
+</html>

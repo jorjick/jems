@@ -1,0 +1,53 @@
+#Server
+server:
+  port: 8443
+  compression:
+    enabled: true
+  context-path: /jems
+  ssl:
+    key-store: classpath:keystore/keystore.p12
+    key-store-password: P@$Sw0rd
+    key-store-type: PKCS12
+    key-alias: jems
+security:
+  require-ssl: true
+#Spring
+spring:
+#Session
+  session:
+    store-type: redis
+    redis:
+      namespace: session
+      flush-mode: immediate
+
+  #Thymeleaf
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    prefix: classpath:/templates/
+    suffix: .html
+
+  #Messages
+  messages:
+    cache-seconds: 3600
+  #Datasource
+  datasource:
+      url: jdbc:postgresql://localhost:5432/jems
+      driver-class-name: org.postgresql.Driver
+      username: jems
+      password: jemspass
+  jpa:
+    database-platform: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+
+
+
+
+#Actuator
+
+
+#Messages
+messages:
+    basename: i18n/messages

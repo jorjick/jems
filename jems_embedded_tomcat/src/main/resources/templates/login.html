@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<th:block th:include="res_inc::head"></th:block>
+
+</head>
+
+<body>
+<sec:authorize access="isAuthenticated()"></sec:authorize>
+	<div class="ui grid container">
+		<div class="middle aligned row" style="height: 100vh">
+			<div class="column">
+				<div class="ui card centered">
+					<div class="content">
+						<div class="header center aligned">
+							<h2 class="ui teal header" th:text="#{login_to_your_account}">
+							</h2>
+						</div>
+					</div>
+					<form id="login_form" class="ui large form"
+						v-on:submit.prevent="login">
+						<div class="ui stacked segment">
+							<div class="field">
+								<div class="ui left icon input">
+									<i class="user icon"></i> <input type="text" name="username"
+										placeholder="Login" th:placeholder="#{login}">
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui left icon input">
+									<i class="lock icon"></i> <input type="password"
+										name="password" placeholder="password"
+										th:placeholder="#{password}">
+								</div>
+							</div>
+							<div class="ui grid">
+								<div class="two column row">
+									<div class="column middle aligned">
+										<div class="ui checkbox">
+											<input id="remember-me" type="checkbox" name="remember-me">
+											<label th:text="#{remember_me}"></label>
+										</div>
+									</div>
+									<div class="column">
+										<button id="login-btn" type="submit"
+											class="ui fluid large teal submit button" th:text="#{login}">
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="ui error message" th:text=#{login_error}></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<th:block th:include="res_inc::bottom-scripts" th:remove="tag"></th:block>
+	<script type="text/javascript" src="/jems/static/js/login.js"></script>
+</body>
