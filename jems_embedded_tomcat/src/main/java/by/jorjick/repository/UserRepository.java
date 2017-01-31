@@ -13,6 +13,6 @@ public interface UserRepository extends JpaRepository<User, String> {
     public User findByUsername (String userName);
     
     
-    @Query("SELECT COUNT(SELECT u FROM User u WHERE u.getUserame() = :userName) > 0")
+    @Query("SELECT CASE WHEN COUNT(u)>0 THEN true ELSE false END FROM User u WHERE u.getUserame() = :userName")
     public boolean existsByUsername(@Param("userName") String userName);
 }
