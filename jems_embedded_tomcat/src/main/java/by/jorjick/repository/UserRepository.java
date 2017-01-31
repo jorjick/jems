@@ -11,8 +11,7 @@ import by.jorjick.domain.User;
  */
 public interface UserRepository extends JpaRepository<User, String> {
     public User findByUsername (String userName);
-    
-    
-    @Query("SELECT CASE WHEN COUNT(u)>0 THEN true ELSE false END FROM User u WHERE u.getUserame() = :userName")
+
+    @Query(value = "SELECT COUNT(u)>0 FROM users u WHERE u.username = :userName", nativeQuery = true)
     public boolean existsByUsername(@Param("userName") String userName);
 }
